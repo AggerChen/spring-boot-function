@@ -3,6 +3,9 @@ package com.agger.springbootfunction.vo;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * @program: Person
@@ -13,7 +16,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Person {
+@ToString
+public class Person implements Serializable {
     private Integer age;
     private String name;
 

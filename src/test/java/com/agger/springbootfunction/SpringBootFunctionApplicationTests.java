@@ -7,11 +7,9 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Predicate;
-import java.util.function.Supplier;
+import java.util.function.*;
 import java.util.stream.Stream;
 
 @SpringBootTest
@@ -109,6 +107,10 @@ class SpringBootFunctionApplicationTests {
 
         // 打印消费方法处理后的lisiList
         System.out.println(lisiList);
+
+        // 示例2 使用双冒号来生成一个Consumer并执行accept()方法
+        List<String> arr = Arrays.asList("a", "b", "c", "d");
+        arr.forEach(SpringBootFunctionApplicationTests::printVal);
     }
 
     /**
@@ -195,8 +197,12 @@ class SpringBootFunctionApplicationTests {
         function4 = function4.compose(x->x+10);
         function4 = function4.andThen(x->x+10);
         System.out.println(function4.apply(3));                 //结果：36
+
     }
 
+    public static void printVal(String str){
+        System.out.println(str);
+    }
 
 
 
