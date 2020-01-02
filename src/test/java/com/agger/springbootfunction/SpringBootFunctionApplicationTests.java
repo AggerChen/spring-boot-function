@@ -158,7 +158,7 @@ class SpringBootFunctionApplicationTests {
                 new Person(23,"王五"),
                 new Person(24,"王五"),
                 new Person(22,"李四"),
-                new Person(26,"张三")
+                new Person(21,"张三")
         ).filter(predicate3).count();
 
         System.out.println(count);
